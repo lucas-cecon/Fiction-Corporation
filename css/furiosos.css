@@ -1,0 +1,384 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/velozesefuriosos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17.5px;
+    align-items: center;
+    justify-content: center;
+}
+
+header a:hover {
+    opacity: 0.7;
+}
+
+header .logo {
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    height: 10vh;
+    padding-right: 10%;
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+header main {
+    background: url("bg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+section iframe {
+    width: 560;
+    height: 315;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+@media (max-width: 999px) {
+
+    section {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section h1 {
+        width: 90%;
+    }
+
+    section p {
+        width: 70%;
+    }
+
+    section .container-fotos {
+        width: 1%;
+        padding-left: 59%;
+    }
+
+    section iframe {
+        width: 280px;
+        height: 157px;
+    }
+
+    .container {
+        justify-content: center;
+        align-items: center;
+        /* width: 50%; */
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .logo {
+        max-width: 60px;
+        padding-right: 0px;
+    }
+
+    header .navigation {
+        position: relative;
+        display: hidden;
+        width: 100%;
+        height: 100%;
+    }
+
+    header .navigation li a {
+        font-size: 0.5em;
+        margin: 5px;
+    }
+
+    .toggle {
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        background: url(images/menu.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        transition: all 0.15s ease-in-out;
+        z-index: 100;
+    }
+
+    .toggle.active {
+        position: fixed;
+        right: 20px;
+        background: url(images/close.png);
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 11;
+    }
+
+    header .navigation.active {
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        z-index: 10;
+    }
+
+    .navigation ul {
+        width: 100%;
+    }
+
+    .navigation ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navigationul li a {
+        display: inline-block;
+        font-size: 36px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .nav-list {
+        display: none;
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background: lightblue;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+        z-index: 20;
+        margin-top: 10px;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+        display: flex;
+    }
+
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        overflow-x: hidden;
+        background-image: url(imagens/fastc.png);
+    }
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/*seção*/
+.content {
+    margin-top: 60px;
+    margin-left: 60px;
+    width: 500px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.content .texts h1 {
+    font-family: 'Audiowide';
+    font-size: 26px;
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.content .texts p {
+    color: #fff;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+.content .container-fotos {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.container-fotos .fotos {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.fotos img {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 20px;
+    width: 117px;
+}
+
+.fotos h3 {
+    text-align: center;
+    color: lightblue;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.footer {
+    background: black;
+    padding: 30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align: center;
+}
+
+.footer .row {
+    width: 100%;
+    margin: 1% 0%;
+    padding: 0.6% 0%;
+    color: white;
+    font-size: 0.8em;
+}
+
+.footer .row a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+.footer .row a:hover {
+    color: lightblue;
+}
+
+.header a:hover {
+    color: lightblue;
+}
+
+.footer .row ul {
+    width: 100%;
+}
+
+.footer .row ul li {
+    display: inline-block;
+    margin: 0px 30px;
+}
+
+.footer .row a i {
+    font-size: 2em;
+    margin: 0% 1%;
+}
+
+@media (max-width:720px) {
+    .footer {
+        text-align: left;
+        padding: 5%;
+    }
+
+    .footer .row ul li {
+        display: block;
+        margin: 10px 0px;
+        text-align: left;
+    }
+
+    .footer .row a i {
+        margin: 0% 3%;
+    }
+}

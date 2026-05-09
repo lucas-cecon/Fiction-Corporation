@@ -1,0 +1,121 @@
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disney</title>
+  <link rel="stylesheet" href="../css/disney.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+  <!-- ICONS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/c0ae4bbcc8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+
+    <nav>
+      <a class="logo" href="#"></a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="index2.html">Início</a></li>
+        <li><a href="index2.html#s2">Sobre</a></li>
+        <li><a href="index2.html#s3">Estúdios</a></li>
+        <li><a href="index2.html#4">Contato</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <section>
+    <div class="content">
+      <div class="textBox">
+        <h2>Seja Bem-Vindo a <br /><span>DISNEY</span> </h2>
+        <p>The Walt Disney Company , conhecida simplesmente como Disney,
+          é uma companhia multinacional estadunidense de mídia de massa sediada no Walt Disney Studios,
+          em Burbank, Califórnia.
+        </p>
+        <a href="disneyfilm.html">Filmes</a>
+      </div>
+      <div class="imgBox">
+        <img src="../imagens/thumb1.png" alt="" class="starbucks" />
+      </div>
+    </div>
+    <ul class="sci">
+      <li>
+        <a href="#"><img src="../imagens/facebook.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="../imagens/twitter.png" alt="" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="../imagens/instagram.png" alt="" /></a>
+      </li>
+    </ul>
+
+    <ul class="thumb">
+      <li>
+        <a href="warner.html"><img src="../imagens/waner.png" alt=""></a>
+      </li>
+      <li>
+        <a href="disney.html"><img src="../imagens/thumb1.png" alt=""></a>
+      </li>
+      <li>
+        <a href="sony.html"><img src="../imagens/thumb2.png" alt=""></a>
+      </li>
+      <li>
+        <a href="universal.html"><img src="../imagens/thumb3.png" alt=""></a>
+      </li>
+    </ul>
+    <div class="circle"></div>
+  </section>
+
+  <script type="text/javascript">
+    function imgSlider(anything) {
+      document.querySelector(".starbucks").src = anything;
+    }
+    function changeCircleColor(color) {
+      const circle = document.querySelector(".circle");
+      circle.style.background = color;
+    }
+
+    function toggleMenu() {
+      var menuToggle = document.querySelector(".toggle");
+      var navigation = document.querySelector(".navigation");
+      menuToggle.classList.toggle(".active");
+      navigation.classList.toggle(".active");
+    }
+  </script>
+  <!-- FOOTER -->
+
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      </div>
+
+      <div class="row">
+        <ul>
+          <li><a href="https://policies.google.com/privacy?hl=pt-BR"> Políticas de Privacidade</a></li>
+          <li><a href="https://policies.google.com/terms?hl=pt-BR">Termos de Serviços</a></li>
+        </ul>
+      </div>
+
+      <div class="row">
+        FICTION Copyright © 2023 Fiction Corporation - Todos Direitos Reservados || Designed Por: Cecon
+      </div>
+    </div>
+  </footer>
+  <script src="../mobile.js"></script>
+</body>
+
+</html>
